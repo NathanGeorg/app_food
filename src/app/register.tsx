@@ -1,18 +1,14 @@
 import { BtnRegister } from "@/components/button"
 import { Input } from "@/components/input"
-import { Link } from "expo-router"
 import { StyleSheet, Text, View } from "react-native"
 
-export default function Index(){
+export default function Register(){
     return(
         <View style={styles.container}>
-            <Text style={styles.tittle}>Login</Text>
+            <Text style={styles.tittle}>Register</Text>
             <Input placeholder="E-mail"/>
             <Input placeholder="Password"/>
             <BtnRegister label="Submit"/>
-            <Text>Não se cadastrou?{" "} 
-                <Link style={styles.link} href="/register">Cadastre-se Aqui</Link>
-            </Text>
         </View>
     )
 }
@@ -27,8 +23,5 @@ const styles = StyleSheet.create({
     tittle: {
         fontSize: 30,
         fontWeight: "bold",
-    },
-    link: {
-        color: "blue",
     }
 })
